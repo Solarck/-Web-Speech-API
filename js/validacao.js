@@ -1,13 +1,15 @@
-function verificaChuteValidow(chute) {
+function verificaChuteValido(chute) {
     const numero = + chute
 
     if (chuteForInvalido(numero)) {
         elementoChute.innerHTML += '<div>Valor inválido</div>'
+        return
     }
 
     if (numeroForMaiorOUMenor(numero)) {
         elementoChute.innerHTML += `
         <div>Valor inválido: Fale um número entre ${menorValor} e ${maiorValor}</div>`
+        return
     }
 
     if (numero === numeroSecreto) {
@@ -18,7 +20,7 @@ function verificaChuteValidow(chute) {
     }
 }
 
-function newFunction(numero) {
+function chuteForInvalido(numero) {
     return Number.isNaN(numero)
 }
 
