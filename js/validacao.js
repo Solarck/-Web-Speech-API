@@ -13,17 +13,25 @@ function verificaChuteValido(chute) {
     }
 
     if (numero === numeroSecreto) {
+        12
         document.body.innerHTML = `
         <h2>Você acertou!</h2>
         <h3>O número secreto era ${numeroSecreto}</h3>
         `
     }
-}
 
-function chuteForInvalido(numero) {
-    return Number.isNaN(numero)
-}
+    else if (numero > numeroSecreto) {
+        elementoChute.innerHTML += `<div>O número secreto é menor <i class="fa-solid fa-up-long"></i></div> -->`
+    }
 
-function numeroForMaiorOUMenor(numero) {
-    return numero > maiorValor || numero < menorValor
-}
+    else {
+        elementoChute.innerHTML += `<div>O número secreto é maior <i class="fa-solid fa-up-long"></i></div> -->`
+    }
+
+    function chuteForInvalido(numero) {
+        return Number.isNaN(numero)
+    }
+
+    function numeroForMaiorOUMenor(numero) {
+        return numero > maiorValor || numero < menorValor
+    }

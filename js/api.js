@@ -1,8 +1,6 @@
 
 const elementoChute = document.getElementById('chute')
 
-elementoChute.innerHTML = `O número secreto é ${numeroSecreto}`
-
 window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
