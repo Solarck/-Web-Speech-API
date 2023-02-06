@@ -35,3 +35,4 @@ function verificaChuteValido(chute) {
     function numeroForMaiorOUMenor(numero) {
         return numero > maiorValor || numero < menorValor
     }
+}
